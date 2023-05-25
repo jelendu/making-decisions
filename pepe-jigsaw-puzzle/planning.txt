@@ -1,0 +1,26 @@
+Directory
+server.js: server setup
+controller.js: handles HTTP requests
+
+Reason for some of the code I use:
+- cors() is a middleware where I can legally request resources or libraries from an established website as long as it is for developmental purposes only
+- app.use(express.static(path.join(__dirname, ''))): this tells express.js to use its middleware(express.static) to serve static files from the same directory its running on
+
+
+Database:
+When a user plays a game, theres a new entry in the Leaderboard table. If they're a guest, the temp_id is used from their local storage. If they're a registered user, their user_id is used.
+
+
+Puzzlers table 
+- user_id: A unique identifier for each user.
+- player: The player's name.
+- username: The player's chosen username.
+
+
+Leaderboard table 
+- leaderboard_id: A unique identifier for each entry which is usually set as an auto-incrementing primary key in SQL databases. This means that every time a new record is inserted, the database automatically assigns the next available integer to the leaderboard_id field. 
+- score: The player's score.
+- time_taken: The time it took the player to finish the game.
+- user_id: The ID of the user who achieved this score. NULL for guests?
+- temp_id: The temporary ID of the guest who achieved this score. NULL for registered users?
+

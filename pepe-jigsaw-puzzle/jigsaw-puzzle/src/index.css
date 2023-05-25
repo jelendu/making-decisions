@@ -1,0 +1,11 @@
+ * {
+            margin: 0;
+            padding: 0;
+      }
+      
+      .background-image {
+            background-image: url('/Users/justjo/pepe-jigsaw-puzzle/jigsaw-puzzle/public/bg.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 100vh;
+      }
